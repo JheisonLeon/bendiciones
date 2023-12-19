@@ -1,0 +1,206 @@
+* {
+    font-family: Verdana;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/samuel2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-attachment: fixed; 
+}
+
+header {
+    background-color:  hsla(0, 8%, 7%, 0.5);
+    /* hsla(0, 8%, 7%, 0.5);*/
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: calc(100vh - 80px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+}
+
+.bio {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 40%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsla(0, 8%, 7%, 0.5);
+}
+
+.saludo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nombre {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.invitacion {
+    font-size: 20px;
+}
+
+.enlacesButton {
+    background-color: #f5102f;
+    color: white;
+    border-radius: 20px;
+    width: 110px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: solid 1px white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
+
+.enlacesButton:hover {
+    background-color: #F85C70;
+}
+
+.enlacesButton:active {
+    transform: scale(0.9); 
+}
+
+.cardButton {
+    background-color: #3e8e41;
+    color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+    border: solid 1px white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
+
+.cardButton:hover {
+    background-color: #F85C70;
+}
+
+.cardButton:active {
+    transform: scale(0.9); 
+}
+
+.photo {
+    width: 45%;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+gap: 40px;
+}
+
+.card {
+    width: 22%;
+    width: 320px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 5px 20px 20px 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    color: #333;
+    margin: 0;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.icons {
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+.header-card1 {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+
+.headerButton {
+    background-color: transparent;
+    color: white;
+    width: 110px;
+    height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+   text-decoration: underline;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    margin: 0 10px;
+}
+
+.title-header {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles-salud.css' %}">
+    <link rel="stylesheet" href="{% static 'icons/css/all.min.css' %}">
+    <title>BENDITA SALUD - NUTRICION</title>
+</head>
+
+<body>
+    <header class="header-card1">
+        <a href="{% url 'inicio' %}" class="title-header">
+            <h1>BENDITA SALUD - NUTRICION</h1>
+        </a>
+
+        <section class="buttons">
+            <a href="{% url 'ejercicios' %}"><button class="headerButton">Ejercicios</button></a>
+            <a href="{% url 'nutricion' %}"><button class="headerButton">Nutricion</button></a>
+        </section>
+    </header>
+
+       <section class="pagination-default">
+        <section class="pagination-arrow">
+            {% if data_tiktok.has_previous %}
+            <a href="?page_youtube={{ data_youtube.previous_page_number }}" class="media-playback"><i class="fa-solid fa-backward"></i></a>
+            {% endif %}
+        </section>
+
+        <div class="carousel tiktok">
+            {% for salud in data_tiktok %}
+            <div class="carousel-item tiktok-item">
+                <section class="title-card"><label> {{ salud.title }}</label></section>
+                <iframe class="iframe-tiktok" src="https://www.tiktok.com/embed/v2/{{ salud.video_code }}"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endfor %}
+        </div>
+
+        <section class="pagination-arrow">
+            {% if data_tiktok.has_next %}
+            <a href="?page_youtube={{ data_youtube.next_page_number }}" class="media-playback"><i class="fa-solid fa-forward"></i></a>
+            {% endif %}
+        </section>
+    </section>
+
+    <br><br>
+
+    <section class="pagination-default">
+        <section class="pagination-arrow">
+            {% if data_youtube.has_previous %}
+            <a href="?page_youtube={{ data_youtube.previous_page_number }}" class="media-playback"><i class="fa-solid fa-backward"></i></a>
+            {% endif %}
+        </section>
+
+        <div class="carousel youtube">
+            {% for salud in data_youtube %}
+            <div class="carousel-item youtube-item">
+                <section class="title-card"><label> {{ salud.title }}</label></section>
+                <iframe class="iframe-youtube" src="https://www.youtube.com/embed/{{ salud.video_code }}" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            {% endfor %}
+        </div>    
+
+        <section class="pagination-arrow">
+            {% if data_youtube.has_next %}
+            <a href="?page_youtube={{ data_youtube.next_page_number }}" class="media-playback"><i class="fa-solid fa-forward"></i></a>
+            {% endif %}
+        </section>
+    </section>
+</body>
+
+</html>

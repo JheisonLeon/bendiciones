@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'icons/css/all.min.css' %}">
+    <title>Samuel Acha</title>
+</head>
+<body>
+    <header>
+        <h1>BENDICIONES A LA FAMILIA</h1>
+    </header>
+
+    <div class="container">
+        <div class="bio">
+            <label class="saludo">Hola, yo soy</label>
+            <label class="nombre">Samuel Achá</label>
+            <label class="invitacion">Te invito a seguir explorando y descubrir más sobre lo que me apasiona.</label>
+           <section class="icons">
+            <a href="https://www.youtube.com/" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+           </section>
+            <button id="scrollToCards" class="enlacesButton">Visitar</button>
+        </div>
+    </div>
+
+    <div class="cards"  id="cardsSection">
+        <div class="card">
+            <img src="{% static 'bendita-salud.png' %}" alt="Card 1">
+            <div class="card-content">
+                <h3>Bendita salud</h3>
+                <p>La salud es nuestro bien más preciado, y una alimentación balanceada es clave para mantenernos fuertes y llenos de vitalidad. Aquí encontrarás consejos, recetas y motivación para llevar un estilo de vida saludable.</p>
+                <a href="{% url 'ejercicios' %}"><button class="cardButton">Ver más</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'bendita-academia.png' %}" alt="Card 2">
+            <div class="card-content">
+                <h3>Bendita Academia</h3>
+                <p>La educación es la llave para abrir puertas hacia el conocimiento. Aquí compartiré recursos sobre Electrotecnia y Arquitectura de Computadoras I. Acompáñame en este viaje educativo, donde exploraremos juntos las maravillas de la tecnología y la ingeniería.</p>
+                <a href="#"><button class="cardButton">Ver más</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'bendito-espiritu.png' %}" alt="Card 3">
+            <div class="card-content">
+                <h3>Bendito Espíritu</h3>
+                <p>La espiritualidad es un camino de crecimiento y descubrimiento interior. Aquí encontrarás reflexiones, meditaciones y mensajes positivos destinados a elevar tu espíritu y conectarte con la esencia divina que reside en cada uno de nosotros.</p>
+                <a href="#"><button class="cardButton">Ver más</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'ia.png' %}" alt="Card 4">
+            <div class="card-content">
+                <h3>Inteligencia Artificial</h3>
+                <p>Explorar el fascinante mundo de la Inteligencia Artificial es mi pasión. Únete a la conversación y descubre el futuro emocionante que la inteligencia artificial nos depara.</p>
+                <a href="#"><button class="cardButton">Ver más</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('scrollToCards').addEventListener('click', function() {
+            const cardsSection = document.getElementById('cardsSection');
+            const yOffset = cardsSection.getBoundingClientRect().top + window.scrollY;
+
+            window.scrollTo({
+                top: yOffset,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
